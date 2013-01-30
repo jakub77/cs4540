@@ -1,0 +1,56 @@
+<?php
+
+?>
+
+<html>
+	<head>
+		<title>
+		</title>
+	</head>
+	<body>
+		<table>
+			<tr>
+				<td>Caption: <input type="text" id="caption1" name="caption1" /><br>				
+					<select name="color1">
+    					<option value="Black">Black</option>
+    					<option value="Blue">Blue</option>
+    					<option value="Red">Red</option>
+    					<option value="Yellow">Yellow</option>
+   					</select><br>
+   					<input type="radio" name=group1 value="Cat">Cat<br></input>
+   					
+   				</td>
+				
+	
+	
+
+				<td>Caption: <input type="text" id="caption2" name="caption2" /><br>				
+					<select name="color2">
+    					<option value="Black">Black</option>
+    					<option value="Blue">Blue</option>
+    					<option value="Red">Red</option>
+    					<option value="Yellow">Yellow</option>
+   					</select><br>
+   				</td>
+			</tr>
+			<tr>
+				<td>Caption: <input type="text" id="caption3" name="caption3" /><br>				
+					<select name="color3">
+    					<option value="Black">Black</option>
+    					<option value="Blue">Blue</option>
+    					<option value="Red">Red</option>
+    					<option value="Yellow">Yellow</option>
+   					</select><br>
+   				</td>
+				<td>Caption: <input type="text" id="caption4" name="caption4" /><br>				
+					<select name="color4">
+    					<option value="Black">Black</option>
+    					<option value="Blue">Blue</option>
+    					<option value="Red">Red</option>
+    					<option value="Yellow">Yellow</option>
+   					</select><br>
+   				</td>
+			</tr>
+		</table>
+	</body>
+</html>

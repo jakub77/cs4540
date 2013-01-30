@@ -1,0 +1,32 @@
+<!--
+Jakub Szpunar
+CS4540 Web Software Architecture Spring 2013
+PS1
+January 2013 -->
+
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="ISO-8859-1">
+    <link rel="stylesheet" type="text/css" href="style.css">
+    <script src="//ajax.googleapis.com/ajax/libs/jquery/1.8.2/jquery.min.js" type="text/javascript"></script>
+    <script src="controller.js"></script>
+    <title>Snake!</title>
+</head>
+
+<body>
+    <h2>Snake!</h2>
+    <canvas id="canvas" width="500" height="500"></canvas>
+    <div id="divControls">
+        <p class="controls">
+            <input type="button" value="Start" id="startButton" />
+            <input type="button" value="Pause" id="pauseButton" />
+            <select id="speedSelect">
+                <option value="90">Slow</option>
+                <option value="60" selected>Normal</option>
+                <option value="40">Fast</option>
+            </select>
+        </p>
+    </div>
+</body>
+</html>

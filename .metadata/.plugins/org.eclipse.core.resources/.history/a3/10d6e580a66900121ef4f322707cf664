@@ -1,0 +1,50 @@
+<?php
+
+?>
+
+<html>
+	<head>
+		<title>
+		</title>
+	</head>
+	<body>
+		<table>
+			<tr>
+				<td>Caption: <input type="text" id="caption1" name="caption1" /><br>				
+					<select name="variety1" onchange="submit();">
+    					<option value="Black">Black</option>
+    					<option value="Blue">Blue</option>
+    					<option value="Red">Red</option>
+    					<option value="Yellow">Yellow</option>
+   					</select><br></td>
+				
+	
+	
+
+				<td>Caption: <input type="text" id="caption2" name="caption2" /><br>				
+					<select name="variety2" onchange="submit();">
+    					<option value="Black">Black</option>
+    					<option value="Blue">Blue</option>
+    					<option value="Red">Red</option>
+    					<option value="Yellow">Yellow</option>
+   					</select><br></td>
+			</tr>
+			<tr>
+				<td>Caption: <input type="text" id="caption3" name="caption3" /><br>				
+					<select name="variety3" onchange="submit();">
+    					<option value="Black">Black</option>
+    					<option value="Blue">Blue</option>
+    					<option value="Red">Red</option>
+    					<option value="Yellow">Yellow</option>
+   					</select><br></td>
+				<td>Caption: <input type="text" id="caption4" name="caption4" /><br>				
+					<select name="variety4" onchange="submit();">
+    					<option value="Black">Black</option>
+    					<option value="Blue">Blue</option>
+    					<option value="Red">Red</option>
+    					<option value="Yellow">Yellow</option>
+   					</select><br></td>
+			</tr>
+		</table>
+	</body>
+</html>

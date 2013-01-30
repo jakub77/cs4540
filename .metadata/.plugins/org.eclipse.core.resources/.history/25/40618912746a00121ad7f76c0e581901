@@ -1,0 +1,57 @@
+<?php
+
+echo "Hello World!";
+
+$selectedCaptions = array("","","","");
+$selectedColors = array("","","","");
+$selectedImages = array("", "", "", "");
+
+checkErrors($selectedCaptions);
+
+require("page.php");
+
+
+
+function checkErrors (&$selectedCaptions) {
+	for($i=0; $i<4;$i++){
+		if(isset($_REQUEST['caption' . $i])){
+			echo $_GET("caption" . $i);
+			//$selectedCaptions[$i] = $_GET("caption" . $i);
+	
+		}
+	}
+	
+	
+	/*function checkQuantity (&$display, &$order, &$message, $isSubmission) {
+	
+	// Set default values
+	$display = '';
+	$order = 0;
+	$message = '';
+	
+	if (isset($_REQUEST['quantity'])) {
+		$display = $_REQUEST['quantity'];
+		if ($isSubmission) {
+			$quantity = filter_var(trim($display), FILTER_VALIDATE_INT);
+			if (is_bool($quantity)) {
+				$message = 'Enter a count';
+			}
+			else if ($quantity <= 0) {
+				$message = 'Enter a positive count';
+			}
+			else {
+				$message = 'Thank you!';
+				$order = $quantity;
+				$display = '';
+			}
+		}
+	}
+}*/
+}
+
+function checkCaptions (){
+	
+	
+}
+
+?>

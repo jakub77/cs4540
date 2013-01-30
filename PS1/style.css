@@ -1,0 +1,30 @@
+/*
+Jakub Szpunar
+CS4540 Web Software Architecture Spring 2013
+PS1
+January 2013
+*/
+
+@CHARSET "ISO-8859-1";
+h2 {
+    color: darkgray;
+    text-align: center;
+}
+.controls input {
+    background-color: darkcyan;
+    color: white;
+}
+canvas {
+    padding-left: 0;
+    padding-right: 0;
+    margin-left: auto;
+    margin-right: auto;
+    display: block;
+}
+#divControls {
+    margin-left:auto;
+    margin-right:auto;
+    width:180px;
+    display:block;
+   }
+

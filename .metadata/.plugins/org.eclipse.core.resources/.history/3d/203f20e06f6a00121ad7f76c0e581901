@@ -1,0 +1,41 @@
+<?php
+
+?>
+
+<html>
+	<head>
+		<title>
+		</title>
+	</head>
+	<body>
+		<form method="get">
+			<table>
+				<?php 
+				
+				$selectedCaptions = array("A","B","C","D");
+				$selectedColors = array("Black");
+				
+				for($i=0; $i<4;$i++){
+					if($i%2==0)
+						echo "<tr>";
+					echo "<td> Caption: <input type=\"text\" id=\"caption" . $i . "\" name = \"caption" . $i . "\" value=\"" . $selectedCaptions[$i] . "\"/><br>\n";
+					echo "<select name = \"color" . $i ."\">\n";
+					echo "<option value=\"Black\">Black</option>\n";
+					echo "<option value=\"Blue\">Blue</option>\n";
+					echo "<option value=\"Red\">Red</option>\n";
+					echo "<option value=\"Yellow\">Yellow</option>\n";
+					echo "</select><br>";
+					echo "<input type=\"radio\" name=\"group" . $i . "\" value=\"Cat\">Cat<br>";
+					echo "<input type=\"radio\" name=\"group" . $i . "\" value=\"Dog\">Dog<br>";
+					echo "<input type=\"radio\" name=\"group" . $i . "\" value=\"Frog\">Frog<br>";
+					echo "<input type=\"radio\" name=\"group" . $i . "\" value=\"Horse\">Horse<br>";
+					echo "</td>";
+					if($i%2==1)
+						echo "</tr>";	
+				}
+				?>		
+				<tr><td><input type="submit" value="Submit"/></td></tr>
+			</table>
+		</form>
+	</body>
+</html>

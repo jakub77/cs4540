@@ -1,0 +1,97 @@
+<?php
+
+?>
+
+<html>
+	<head>
+		<title>
+		</title>
+	</head>
+	<body>
+	<form method="get">
+		<table>
+		<?php 
+			for($i=1; $i<5;$i++)
+			{
+				if($i%2==1)
+					echo "<tr>";
+				echo "<td> Caption: <input type=\"text\" id=\"caption" . $i . "\" name = \"caption" . $i . "\" /><br>\n";
+				echo "<select name = \"color" . $i ."\">\n";
+				echo "<option value=\"Black\">Black</option>\n";
+				echo "<option value=\"Blue\">Blue</option>\n";
+				echo "<option value=\"Red\">Red</option>\n";
+				echo "<option value=\"Yellow\">Yellow</option>\n";
+				echo "</select><br>";
+				echo "<input type=\"radio\" name=\"group" . $i . "\" value=\"Cat\">Cat<br>";
+				echo "<input type=\"radio\" name=\"group" . $i . "\" value=\"Dog\">Dog<br>";
+				echo "<input type=\"radio\" name=\"group" . $i . "\" value=\"Frog\">Frog<br>";
+				echo "<input type=\"radio\" name=\"group" . $i . "\" value=\"Horse\">Horse<br>";
+				echo "</td>";
+				if($i%2==1)
+					echo "</tr>";
+				
+			}
+		?>
+		
+			<tr>
+				<td>Caption: <input type="text" id="caption1" name="caption1" /><br>				
+					<select name="color1">
+    					<option value="Black">Black</option>
+    					<option value="Blue">Blue</option>
+    					<option value="Red">Red</option>
+    					<option value="Yellow">Yellow</option>
+   					</select><br>
+   					<input type="radio" name=group1 value="Cat">Cat<br>
+   					<input type="radio" name=group1 value="Dog">Dog<br>
+   					<input type="radio" name=group1 value="Frog">Frog<br>
+   					<input type="radio" name=group1 value="Horse">Horse<br>   					
+   				</td>
+				<td>Caption: <input type="text" id="caption2" name="caption2" /><br>				
+					<select name="color2">
+    					<option value="Black">Black</option>
+    					<option value="Blue">Blue</option>
+    					<option value="Red">Red</option>
+    					<option value="Yellow">Yellow</option>
+   					</select><br>
+   					<input type="radio" name=group2 value="Cat">Cat<br>
+   					<input type="radio" name=group2 value="Dog">Dog<br>
+   					<input type="radio" name=group2 value="Frog">Frog<br>
+   					<input type="radio" name=group2 value="Horse">Horse<br>   
+   				</td>
+			</tr>
+			<tr>
+				<td>Caption: <input type="text" id="caption3" name="caption3" /><br>				
+					<select name="color3">
+    					<option value="Black">Black</option>
+    					<option value="Blue">Blue</option>
+    					<option value="Red">Red</option>
+    					<option value="Yellow">Yellow</option>
+   					</select><br>
+   					<input type="radio" name=group3 value="Cat">Cat<br>
+   					<input type="radio" name=group3 value="Dog">Dog<br>
+   					<input type="radio" name=group3 value="Frog">Frog<br>
+   					<input type="radio" name=group3 value="Horse">Horse<br>   
+   				</td>
+				<td>Caption: <input type="text" id="caption4" name="caption4" /><br>				
+					<select name="color4">
+    					<option value="Black">Black</option>
+    					<option value="Blue">Blue</option>
+    					<option value="Red">Red</option>
+    					<option value="Yellow">Yellow</option>
+   					</select><br>
+   					<input type="radio" name=group4 value="Cat">Cat<br>
+   					<input type="radio" name=group4 value="Dog">Dog<br>
+   					<input type="radio" name=group4 value="Frog">Frog<br>
+   					<input type="radio" name=group4 value="Horse">Horse<br>   
+   				</td>
+			</tr>
+			<tr>
+				<td>
+					<br>
+					 <input type="submit" value="Submit"/>
+				</td>
+			</tr>
+		</table>
+		</form>
+	</body>
+</html>

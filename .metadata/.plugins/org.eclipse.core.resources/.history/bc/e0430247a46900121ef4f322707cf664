@@ -1,0 +1,25 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Name>PS2</Name>
+    <ProjectGuid>d06c7b6a-234d-4c9f-8dfa-6a326f7b5b1b</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <RootNamespace>PS2</RootNamespace>
+    <!-- important to be opened by PHP Tools, when also Phalanger Tools are installed -->
+    <ProjectTypeGuids>{A0786B88-2ADB-4C21-ABE8-AA2D79766269}</ProjectTypeGuids>
+    <AssemblyName>PS2</AssemblyName>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)' == 'Debug' ">
+    <IncludeDebugInformation>true</IncludeDebugInformation>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)' == 'Release' ">
+    <IncludeDebugInformation>false</IncludeDebugInformation>
+  </PropertyGroup>
+  <ItemGroup>
+    <Compile Include="index.php" />
+    <Compile Include="page.php">
+      <SubType>Code</SubType>
+    </Compile>
+  </ItemGroup>
+</Project>
