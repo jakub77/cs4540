@@ -1,0 +1,18 @@
+/*
+Jakub Szpunar
+CS4540 Web Software Architecture Spring 2013
+PS2
+January 2013
+*/
+
+body {background-color:#ffffff;}
+h2 {margin-left:10px;}
+table {border:2px solid black;}
+input {margin:2px;}
+select {margin:2px; margin-bottom:4px;}
+#submit {text-align:center;}
+#table1 {border-spacing:10px;}
+#table2 {text-align:center;}
+#fullImage {margin-right:10px; margin-left:10px; margin-top:10px;}
+#thumbnail {max-height:40px; max-width:40px; margin-left:2px; margin-right:5px;}
+#error {color:red;}
