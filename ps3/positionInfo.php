@@ -6,11 +6,11 @@ if (!isset($_SESSION['position']))
 
 $position; $positionError;
 $error = checkPositionInfo($position, $positionError);
-if($error == 0){
-	$_SESSION['position'] = $position;
-}
 if($error == 2){
 	$position = $_SESSION['position'];
+}
+else{
+	$_SESSION['position'] = $position;
 }
 
 ?>
@@ -18,6 +18,7 @@ if($error == 2){
 <!DOCTYPE html>
 <html>
 <head>
+<link rel="stylesheet" type="text/css" href="style.css">
 <title>Resume Composer - Position Sought</title>
 </head>
 <body>
@@ -30,8 +31,8 @@ if($error == 2){
  </tr>
  <tr>
  <?php 
- 	echo "<td><textarea name = 'position' rows = '10' >$position</textarea></td>";
- 	echo "<td>$positionError</td>"
+ 	echo "<td><textarea name = 'position' rows = '20' cols= '50' >$position</textarea></td>";
+ 	echo "<td><b id = 'error'> $positionError</b></td>"
  ?>
  </tr>
  <tr>
@@ -53,7 +54,7 @@ function checkPositionInfo(&$position, &$positionError) {
 		$position = $_GET['position'];
 		
 		if(strlen($position) == 0){
-			$error = true;
+			$error = 1;
 			$positionError = "Please describe your requested position.";
 		}
 	}
