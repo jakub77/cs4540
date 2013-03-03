@@ -1,5 +1,9 @@
 <?php 
+// Jakub Szpunar
+// CS4540 Assignment 3
+// February 2013
 
+// Start the session and initialize session variables if needed.
 session_start();
 if (!isset($_SESSION['name']))
 	$_SESSION['name'] = "";
@@ -16,7 +20,8 @@ if (!isset($_SESSION['stopDates']))
 if (!isset($_SESSION['descriptions']))
 	$_SESSION['descriptions'] = Array();
 
-$name = ""; $address = ""; $phone = "";
+// Set up local variables to store data from the session.
+//$name = ""; $address = ""; $phone = "";
 $name = $_SESSION['name'];
 $address = $_SESSION['address'];
 $phone = $_SESSION['phone'];
@@ -26,7 +31,7 @@ $stopDates = $_SESSION['stopDates'];
 $descriptions = $_SESSION['descriptions'];
 ?>
 
-
+<!--  CREATE THE HTML FOR THE PAGE -->
 <!DOCTYPE html>
 <html>
 <head>
@@ -36,23 +41,21 @@ $descriptions = $_SESSION['descriptions'];
 <body>
 
 <form method="get">
-
+<table id = 'summaryTable'>
 <?php 
-echo "<p>$name</p>";
-echo "<p>$address  $phone</p>";
-echo "<p>$position</p>";
 
-echo "<p>Work experience</p>";
-
+// Display information as a table. Use a new row for each bit of information.
+echo "<tr><td>$name</td></tr>";
+echo "<tr><td>$phone</td></tr>";
+echo "<tr><td>$address</td></tr>";
+echo "<tr><td><h3>Position Sought</h3></td></tr>";
+echo "<tr><td>$position</td></tr>";
+echo "<tr><td><h3>Work experience</h3></td></tr>";
 for($i = 0; $i < count($startDates); $i++){
-	echo "<p>$startDates[$i] - $stopDates[$i]: $descriptions[$i]</p>";
+	echo "<tr><td>$startDates[$i] - $stopDates[$i]: $descriptions[$i]</td></tr>";
 }
-
 ?>
-
-<a href="contactInfo.php">Contact Info</a>
-<a href="positionInfo.php">Position Sought</a>
-<a href="employmentHistoryInfo.php">Employment History</a>
+</table>
 </form>
 </body>
 </html>

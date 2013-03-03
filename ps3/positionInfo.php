@@ -1,14 +1,25 @@
 <?php 
+// Jakub Szpunar
+// CS4540 Assignment 3
+// February 2013
 
+// Start the session and set the variable if needed.
 session_start();
 if (!isset($_SESSION['position']))
 	$_SESSION['position'] = "";
 
+// Local variables.
 $position; $positionError;
+
+// Check if there are errors in form fill out.
 $error = checkPositionInfo($position, $positionError);
+
+// If 2, it's a fresh page, load data if there is some.
 if($error == 2){
 	$position = $_SESSION['position'];
 }
+
+// Otherwise save submission.
 else{
 	$_SESSION['position'] = $position;
 }
@@ -31,6 +42,7 @@ else{
  </tr>
  <tr>
  <?php 
+ 	// Output the requested position information field.
  	echo "<td><textarea name = 'position' rows = '20' cols= '50' >$position</textarea></td>";
  	echo "<td><b id = 'error'> $positionError</b></td>"
  ?>
@@ -47,12 +59,19 @@ else{
 </html>
 
 <?php 
+
+// Check to see if there are errors in the submission.
+// Return 1 = field error, 0 = no error, 2 = fresh page.
 function checkPositionInfo(&$position, &$positionError) {
+	// Initalize error state to no error.
 	$positionError = "";
 	$error = 0;
+	
+	// Check to see if it's a new page load.
 	if (isset($_REQUEST['position'])) {
 		$position = $_GET['position'];
 		
+		// See if the field is filled out.
 		if(strlen($position) == 0){
 			$error = 1;
 			$positionError = "Please describe your requested position.";

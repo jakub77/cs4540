@@ -1,3 +1,10 @@
+/* 
+Jakub Szpunar
+CS4540
+Assignment 3
+Feb 2013
+*/
 h2 {margin-left:10px;}
 table {border:2px solid black;}
 #error {color:red;}
+#summaryTable {text-align:center; max-width:600px}

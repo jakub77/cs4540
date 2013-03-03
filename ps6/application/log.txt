@@ -1,0 +1,9 @@
+Sun, 03 Mar 2013 04:24:10 +0100
+SQLSTATE[42S02]: Base table or view not found: 1146 Table 'ps6_szpunar.PastEmpoyInfo' doesn't exist
+
+Sun, 03 Mar 2013 05:51:49 +0100
+SQLSTATE[23000]: Integrity constraint violation: 1048 Column 'UserName' cannot be null
+
+Sun, 03 Mar 2013 06:47:34 +0100
+SQLSTATE[HY093]: Invalid parameter number: number of bound variables does not match number of tokens
+

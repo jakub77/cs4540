@@ -1,0 +1,33 @@
+/*Jakub Szpunar CS4540 PS5*/
+
+@CHARSET "ISO-8859-1";
+
+.block {
+    border:1px solid black;
+    margin-bottom:10px;
+}
+
+.date {
+    size:20;
+}
+
+.info {
+    width:400px;
+    height:75px;
+}
+
+.contact {
+    size:40;
+}
+
+.remove {
+    text-align:right;
+}
+
+.error {
+	color:red;
+}
+
+
+
+
