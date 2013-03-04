@@ -1,6 +1,6 @@
 <?php
 // Jakub Szpunar
-// CS4540 PS5
+// CS4540 PS6
 // Get the utilities
 require('application/utilities.php');
 
@@ -11,15 +11,22 @@ $isSubmission = resumeSession();
 if ($isSubmission)
 {	
 	// Get parameters
-	$beg = getParam('beg', array());
-    $end = getParam('end', array());
-    $job = getParam('job', array());
+	$beg = getParamA('beg', array());
+    $end = getParamA('end', array());
+    $job = getParamA('job', array());
     
     // Trim arrays to the same length and save to session
     $length = min(count($beg), count($end), count($job));
     $_SESSION['beg'] = array_slice($beg, 0, $length);
     $_SESSION['end'] = array_slice($end, 0, $length);
-    $_SESSION['job'] = array_slice($job, 0, $length);  
+    $_SESSION['job'] = array_slice($job, 0, $length);
+    
+    for($i = 0; $i < count($beg); $i++)
+    {
+    	$_SESSION['beg'][$i] = htmlspecialchars(($_SESSION['beg'][$i]));
+    	$_SESSION['end'][$i] = htmlspecialchars(($_SESSION['end'][$i]));
+    	$_SESSION['job'][$i] = htmlspecialchars(($_SESSION['job'][$i]));
+    }
 }
 
 // Compose JavaScript that will create job forms

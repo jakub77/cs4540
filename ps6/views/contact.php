@@ -1,5 +1,5 @@
 <!doctype html>
-<!-- Jakub Szpunar CS4540 PS5 -->
+<!-- Jakub Szpunar CS4540 PS6 -->
 <html>
 
 <head>
@@ -12,9 +12,9 @@
 	<h2>Contact Information</h2>
 
 	<ul>
-		<li><a href="history.php">Employment history</a>
-		</li>
+		<li><a href="history.php">Employment history</a></li>
 		<li><a href="position.php">Position wanted</a></li>
+		<li><a target="resume" href="resume.php">View resume</a></li>
 		<?php 
 		if($_SESSION['role'] != 0)
 		{
@@ -29,7 +29,6 @@
 			echo "<li> <a href=\"register.php\">Register</a></li>";
 		}
 		?>
-		<li><a target="resume" href="resume.php">View resume</a></li>
 	</ul>
 
 	<p>Please enter your contact information.</p>

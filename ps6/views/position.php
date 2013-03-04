@@ -1,5 +1,5 @@
 <!doctype html>
-<!-- Jakub Szpunar CS4540 PS5 -->
+<!-- Jakub Szpunar CS4540 PS6 -->
 <html>
 
 <head>
@@ -39,9 +39,7 @@
 		<table class="block">
 			<tr>
 				<td <?php validate('position') ?>>Position Sought</td>
-				<td><textarea class="info" name="position">
-						<?php sticky('position') ?>
-					</textarea></td>
+				<td><textarea class="info" name="position"><?php trim(sticky('position')) ?></textarea></td>
 			</tr>
 		</table>
 

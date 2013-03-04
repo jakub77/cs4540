@@ -1,5 +1,5 @@
 <!doctype html>
-<!-- Jakub Szpunar CS4540 PS5 -->
+<!-- Jakub Szpunar CS4540 PS6 -->
 
 <html>
 
@@ -20,6 +20,8 @@ function openWindow()
 </head>
 
 <body>
+	<h2>Resume Archive</h2>
+
 	<ul>
 		<li><a href="contact.php">Contact information</a>
 		</li>

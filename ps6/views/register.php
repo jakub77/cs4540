@@ -8,6 +8,7 @@
 
 <script>
 // Use javascript to validate input first.
+// If it is valid, submits the document.
 function validate()
 {
 	var user = document.getElementById('userName').value;
@@ -37,7 +38,6 @@ function validate()
 	}
 	return true;
 
-	//document.forms["regForm"].submit();
 	document.getElementById("regForm").submit();
 }
 </script>
@@ -72,7 +72,7 @@ function validate()
 				</td>
 			</tr>
 		</table>
-		<p>
+		<p> <!-- Submit buttons. Register submits through the validator, Cancel goes back a page -->
 			<input type="submit" name="save" value="Register" /> <input
 				type="button" name="save" value="Cancel" onClick="window.history.back()" />
 		</p>

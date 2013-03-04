@@ -1,11 +1,11 @@
 <?php
-//Jakub Szpunar
-// CS4540 PS5
+// Jakub Szpunar CS4540 PS6
 
 // Opens and returns a DB connection
 function openDBConnection () {
+	require('hidden/dbpassword.php');
 	$DBH = new PDO("mysql:host=atr.eng.utah.edu;dbname=ps6_szpunar",
-			'szpunar_sw', '00578522');
+			$dbuser, $dbpass);
 	$DBH->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
 	return $DBH;
 }

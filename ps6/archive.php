@@ -1,10 +1,14 @@
 <?php
 // Jakub Szpunar
-// CS4540 PS5
+// CS4540 PS6
 
 // Get the utilities
 require('application/utilities.php');
 require('application/db.php');
+require('application/auth.php');
+
+// Redirect to https
+redirectToHTTPS();
 
 // Resume session
 $isSubmission = resumeSession();
@@ -13,6 +17,7 @@ $error = "";
 $message = "";
 $bodyOnLoad = "";
 
+// If they are not logged in, redirect to login.
 if(validateRole(0) == 1)
 {
 	forceReferer("archive.php");

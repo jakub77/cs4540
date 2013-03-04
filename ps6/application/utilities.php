@@ -1,7 +1,7 @@
 <?php
 
 //Jakub Szpunar
-// CS4540 PS5
+// CS4540 PS6
 
 // Resumes a session; initializes session variables if necessary
 // Reports whether this is a submission
@@ -13,6 +13,7 @@ function resumeSession ()
 	initSession('job', array(''));
 	initSession('name', '');
 	initSession('address', '');
+	initSession('salt', 'asdfasdf');
 	initSession('phone', '');
 	initSession('position', '');
 	initSession('resumeName', '');
@@ -37,6 +38,10 @@ function initSession ($param, $default)
 	}
 }
 
+/**
+ * Store the referer. Doesn't store if currentPage is the same as the referer.
+ * @param $currentPage
+ */
 function setReferer($currentPage)
 {
 	if(!isset($_SERVER['HTTP_REFERER']))
@@ -50,11 +55,19 @@ function setReferer($currentPage)
 	return;
 }
 
+/**
+ * Force sets a referer to $page
+ * @param unknown $page
+ */
 function forceReferer($page)
 {
 	$_SESSION['referer'] = $page;
 }
 
+/**
+ * Use a referer. Returns the referer and clears the referer from the session.
+ * @return Ambigous <string, unknown>
+ */
 function useReferer()
 {
 	$res = $_SESSION['referer'];
@@ -84,6 +97,11 @@ function validate ($param)
 // Return the value of the parameter $param if it exists.
 // Otherwise, return $default.
 function getParam ($param, $default)
+{
+	return (isset($_REQUEST[$param])) ? htmlspecialchars($_REQUEST[$param]) : $default;
+}
+
+function getParamA ($param, $default)
 {
 	return (isset($_REQUEST[$param])) ? $_REQUEST[$param] : $default;
 }

@@ -1,6 +1,6 @@
 <?php
 // Jakub Szpunar
-// CS4540 PS5
+// CS4540 PS6
 // Get the utilities
 require('application/utilities.php');
 //require('applicaiton/db.php');
@@ -13,6 +13,7 @@ $name = getParam('name', '');
 $login = getParam('login', '');
 $error = 0;
 
+// If name is not set, use session variables instead of DB.
 if(strlen($name) == 0)
 {
 	$beg = $_SESSION['beg'];
@@ -26,10 +27,12 @@ if(strlen($name) == 0)
 }
 else
 {
+	// If login is not set, use session login.
 	if(strlen($login) == 0)
 	{
 		$login = $_SESSION['userName'];
 	}
+	// Get the data from the DB.
 	$contactName;
 	$address;
 	$phone;
